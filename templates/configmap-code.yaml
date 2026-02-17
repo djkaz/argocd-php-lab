@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: php-site-files
+data:
+  index.php: |
+    <?php include 'menu.php'; ?>
+    <div style="padding:20px;">
+      <h1>Pagina Principală</h1>
+      <p>Bine ai venit! Acest site este gestionat prin ArgoCD.</p>
+    </div>
+  
+  contact.php: |
+    <?php include 'menu.php'; ?>
+    <div style="padding:20px;">
+      <h1>Contact</h1>
+      <p>Trimite-ne un e-mail la: contact@djkaz.local</p>
+    </div>
+
+  menu.php: |
+    <nav style="background:#333; padding:10px;">
+      <a href="index.php" style="color:white; margin-right:15px;">Acasa</a>
+      <a href="contact.php" style="color:white;">Contact</a>
+    </nav>
